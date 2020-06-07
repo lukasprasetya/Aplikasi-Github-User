@@ -10,14 +10,14 @@ class DetailUserActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_user)
 
-        cv_avatar.setImageResource(getIntent().getStringExtra("USERIMAGE").toInt())
-        tv_namedetail.text = getIntent().getStringExtra("DETAILUSERNAME")
-        tv_username.text = getIntent().getStringExtra("USERNAME")
-        tv_company.text = getIntent().getStringExtra("USERCOMPANY")
-        tv_location.text = getIntent().getStringExtra("USERLOCATION")
-        tv_repo.text = getIntent().getStringExtra("USERREPO")
-        tv_followers2.text=getIntent().getStringExtra("USERFOLLOWER")
-        tv_following2.text=getIntent().getStringExtra("USERFOLLOWIN")
+        cv_avatar.setImageResource(intent.getStringExtra("USERIMAGE").toInt())
+        tv_namedetail.text = intent.getStringExtra("DETAILUSERNAME")
+        tv_username.text = intent.getStringExtra("USERNAME")
+        tv_company.text = intent.getStringExtra("USERCOMPANY")
+        tv_location.text = intent.getStringExtra("USERLOCATION")
+        tv_repo.text = intent.getStringExtra("USERREPO")
+        tv_followers2.text = intent.getStringExtra("USERFOLLOWER")
+        tv_following2.text = intent.getStringExtra("USERFOLLOWIN")
 
 
     }

@@ -1,5 +1,9 @@
 package com.example.githubuserapp
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class Gituser(
     var photo: Int,
     var name: String,
@@ -10,4 +14,4 @@ data class Gituser(
     var follower:String,
     var followin:String
 
-)
+) :Parcelable
