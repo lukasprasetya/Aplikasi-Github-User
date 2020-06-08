@@ -68,16 +68,20 @@ class MainActivity : AppCompatActivity(), OnUserClickListener {
     }
 
     override fun onUserClick(user: Gituser) {
-        val intent = Intent(this, DetailUserActivity::class.java)
-        intent.putExtra("USERIMAGE", user.photo.toString())
-        intent.putExtra("DETAILUSERNAME", user.name)
-        intent.putExtra("USERNAME", user.description)
-        intent.putExtra("USERCOMPANY", user.company)
-        intent.putExtra("USERLOCATION", user.location)
-        intent.putExtra("USERREPO", user.repo)
-        intent.putExtra("USERFOLLOWER", user.follower)
-        intent.putExtra("USERFOLLOWIN", user.followin)
-        startActivity(intent)
+//        val intent = Intent(this, DetailUserActivity::class.java)
+////        intent.putExtra("USERIMAGE", user.photo.toString())
+////        intent.putExtra("DETAILUSERNAME", user.name)
+////        intent.putExtra("USERNAME", user.description)
+////        intent.putExtra("USERCOMPANY", user.company)
+////        intent.putExtra("USERLOCATION", user.location)
+////        intent.putExtra("USERREPO", user.repo)
+////        intent.putExtra("USERFOLLOWER", user.follower)
+////        intent.putExtra("USERFOLLOWIN", user.followin)
+////        startActivity(intent)
+
+        val detailUserIntent = Intent(this@MainActivity, DetailUserActivity::class.java)
+        detailUserIntent.putExtra(DetailUserActivity.EXTRA_USER, user)
+        startActivity(detailUserIntent)
 
     }
 }

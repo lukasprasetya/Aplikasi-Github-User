@@ -2,7 +2,7 @@ package com.example.githubuserapp
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
-
+//penerapan parcelable
 @Parcelize
 data class Gituser(
     var photo: Int,
